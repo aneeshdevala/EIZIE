@@ -5,4 +5,4 @@ const kskyblue = Color(0xFFeae8fe);
 const klightblue = Color(0xFF733cff);
 const kBlack = Colors.black;
 const kWhite = Colors.white;
-const kGrey = Color.fromARGB(255, 213, 212, 212);
+const kGrey = Color.fromARGB(255, 226, 226, 235);
