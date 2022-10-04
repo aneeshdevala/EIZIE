@@ -16,22 +16,16 @@ class SwimmingCategory extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kskyblue,
         elevation: 0,
-        leading: Padding(
-          padding: const EdgeInsets.only(top: 23),
-          child: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.arrow_back,
-                color: mainColor,
-                size: 30,
-              )),
-        ),
-        title: const Padding(
-          padding: EdgeInsets.only(top: 35),
-          child: Text(
-            'Swimming',
-            style: TextStyle(color: mainColor),
-          ),
+        leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.arrow_back,
+              color: mainColor,
+              size: 30,
+            )),
+        title: const Text(
+          'Swimming',
+          style: TextStyle(color: mainColor),
         ),
       ),
       body: Stack(
@@ -39,6 +33,7 @@ class SwimmingCategory extends StatelessWidget {
           Positioned(
             bottom: 0,
             child: Container(
+              padding: const EdgeInsets.all(16),
               width: width,
               height: height / 1.4,
               decoration: const BoxDecoration(
@@ -46,60 +41,79 @@ class SwimmingCategory extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40))),
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    kheight50,
-                    kheight40,
-                    Text(
-                      'YOU have got some options here!',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+              child: SingleChildScrollView(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      kheight40,
+                      const Text(
+                        'YOU have got some options here!',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    kheight50,
-                    SlotWidget(
-                      firstContainerColor: Color.fromARGB(255, 253, 251, 251),
-                      secondContainerColor: Color(0xFFff66c4),
-                      placeName: 'YMCA',
-                      placeDetail: Text(
-                        'YMCA swimming pool',
-                        style: kTextStyle2,
+                      kheight50,
+                      const SlotWidget(
+                        firstContainerColor: Color.fromARGB(255, 253, 251, 251),
+                        secondContainerColor: Color(0xFFff66c4),
+                        placeName: 'YMCA',
+                        placeDetail: Text(
+                          'YMCA swimming pool',
+                          style: kTextStyle2,
+                        ),
+                        time: Text(
+                          '7.00 AM to 9.00 PM',
+                          style: TextStyle(fontSize: 16, color: mainColor),
+                        ),
                       ),
-                      time: Text(
-                        '7.00 AM to 9.00 PM',
-                        style: TextStyle(fontSize: 16, color: mainColor),
+                      kheight20,
+                      SlotWidget(
+                        firstContainerColor: const Color(0xff733cff),
+                        secondContainerColor: const Color(0xFFff7077),
+                        placeName: 'John \nRhodes',
+                        placeDetail: Text(
+                          'YMCA swimming pool',
+                          style: kTextStyle2.copyWith(color: kWhite),
+                        ),
+                        time: const Text(
+                          '7.00 AM to 9.00 PM',
+                          style: TextStyle(fontSize: 16, color: Colors.white),
+                        ),
                       ),
-                    ),
-                    kheight20,
-                    SlotWidget(
-                      firstContainerColor: Color(0xff733cff),
-                      secondContainerColor: Color(0xFFff7077),
-                      placeName: 'John \nRhodes',
-                      placeDetail: Text('John Rhodes pool'),
-                      time: Text('7.00 AM to 9.00 PM'),
-                    ),
-                    kheight20,
-                    SlotWidget(
-                      firstContainerColor: Color.fromARGB(255, 253, 251, 251),
-                      secondContainerColor: Color(0xFFff66c4),
-                      placeName: 'YMCA',
-                      placeDetail: Text('YMCA swimming pool'),
-                      time: Text('7.00 AM to 9.00 PM'),
-                    ),
-                    kheight20,
-                    SlotWidget(
-                      firstContainerColor: Color.fromARGB(255, 253, 251, 251),
-                      secondContainerColor: Color(0xFFff66c4),
-                      placeName: 'YMCA',
-                      placeDetail: Text('YMCA swimming pool'),
-                      time: Text('7.00 AM to 9.00 PM'),
-                    ),
-                    kheight20,
-                  ],
+                      kheight20,
+                      const SlotWidget(
+                        firstContainerColor: Color.fromARGB(255, 253, 251, 251),
+                        secondContainerColor: Color(0xFFff66c4),
+                        placeName: 'YMCA',
+                        placeDetail: Text(
+                          'YMCA swimming pool',
+                          style: kTextStyle2,
+                        ),
+                        time: Text(
+                          '7.00 AM to 9.00 PM',
+                          style: TextStyle(fontSize: 16, color: mainColor),
+                        ),
+                      ),
+                      kheight20,
+                      const SlotWidget(
+                        firstContainerColor: Color.fromARGB(255, 253, 251, 251),
+                        secondContainerColor: Color(0xFFff66c4),
+                        placeName: 'YMCA',
+                        placeDetail: Text(
+                          'YMCA swimming pool',
+                          style: kTextStyle2,
+                        ),
+                        time: Text(
+                          '7.00 AM to 9.00 PM',
+                          style: TextStyle(fontSize: 16, color: mainColor),
+                        ),
+                      ),
+                      kheight20,
+                    ],
+                  ),
                 ),
               ),
             ),

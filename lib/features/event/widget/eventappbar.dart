@@ -6,7 +6,7 @@ AppBar appbarwidget() {
   return AppBar(
     elevation: 0,
     backgroundColor: kskyblue,
-    toolbarHeight: 100,
+    toolbarHeight: 80,
     leading: IconButton(
       icon: const Icon(
         Icons.menu,

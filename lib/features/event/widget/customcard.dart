@@ -12,10 +12,12 @@ Card customCard(BuildContext context, String name, String image) {
           children: [
             Image.asset(
               image,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
+              width: double.infinity,
             ),
             Positioned(
               right: 10,
+              top: 10,
               child: Container(
                 decoration: BoxDecoration(
                   color: mainColor,

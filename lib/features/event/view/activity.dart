@@ -32,39 +32,43 @@ class EventScreen extends StatelessWidget {
             topRight: Radius.circular(40),
           ),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              kheight20,
-              const Text(
-                'Events',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(30),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                kheight20,
+                const Text(
+                  'Events',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-              ),
-              kheight20,
-              LimitedBox(
-                maxHeight: MediaQuery.of(context).devicePixelRatio * 17,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: eventNames.length,
-                    itemBuilder: (context, index) {
-                      return EventScroll(
-                        name: eventNames[index],
-                        isSelected: index == 0,
-                      );
-                    }),
-              ),
-              kheight20,
-              customCard(context, 'Car Show @ SSM Downtown',
-                  'assets/images/Car Show Event Poster 1.png'),
-              kheight20,
-              customCard(context, 'under 14 kids Baseball Match',
-                  'assets/images/Kids Baseball Match 1.png'),
-            ],
+                kheight20,
+                LimitedBox(
+                  maxHeight: MediaQuery.of(context).devicePixelRatio * 17,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: eventNames.length,
+                      itemBuilder: (context, index) {
+                        return EventScroll(
+                          name: eventNames[index],
+                          isSelected: index == 0,
+                        );
+                      }),
+                ),
+                kheight20,
+                customCard(context, 'Car Show @ SSM Downtown',
+                    'assets/images/Car Show Event Poster 1.png'),
+                kheight20,
+                customCard(context, 'under 14 kids Baseball Match',
+                    'assets/images/Kids Baseball Match 1.png'),
+                kheight20,
+              ],
+            ),
           ),
         ),
       ),
