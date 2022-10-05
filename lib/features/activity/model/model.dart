@@ -35,7 +35,7 @@ class ActivityModel {
 
 final activityModelList = [
   ActivityModel(
-      color: Colors.yellowAccent,
+      color: const Color(0xffF9D649),
       head: "Swimming",
       image: 'assets/images/Swimming.png',
       clipImage: '',
@@ -45,7 +45,7 @@ final activityModelList = [
       icon1: const Icon(Icons.arrow_forward_ios),
       isVisible: false),
   ActivityModel(
-      color: Colors.greenAccent,
+      color: const Color(0xff05BA99),
       head: "Movie",
       image: 'assets/images/Movie.png',
       clipImage: '',
@@ -59,7 +59,7 @@ final activityModelList = [
       icon2: const Icon(Icons.arrow_forward_ios),
       isVisible: true),
   ActivityModel(
-      color: Colors.pinkAccent,
+      color: const Color(0xffFB689A),
       head: "Library",
       image: 'assets/images/Library.png',
       clipImage: '',
@@ -69,7 +69,7 @@ final activityModelList = [
       icon1: const Icon(Icons.arrow_forward_ios),
       isVisible: false),
   ActivityModel(
-      color: Colors.blue,
+      color: const Color(0xff446BCC),
       head: "Gym",
       image: 'assets/images/Gym 1.png',
       clipImage: '',
@@ -79,7 +79,7 @@ final activityModelList = [
       icon1: const Icon(Icons.arrow_forward_ios),
       isVisible: false),
   ActivityModel(
-      color: Colors.blueAccent,
+      color: const Color(0xff00C2CB),
       head: "Bowling",
       image: 'assets/images/Bowling 1.png',
       clipImage: '',

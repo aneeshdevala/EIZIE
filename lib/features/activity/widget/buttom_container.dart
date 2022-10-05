@@ -10,7 +10,7 @@ class BottumContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          color: kWhite, borderRadius: BorderRadius.all(Radius.circular(20))),
+          color: kWhite, borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Row(
         children: [
           Card(
@@ -20,16 +20,8 @@ class BottumContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(13)),
             color: const Color.fromARGB(255, 255, 255, 254),
             child: Padding(
-              padding: const EdgeInsets.all(2),
-              child: Column(
-                children: const [
-                  Icon(Icons.abc),
-                  Text('SSM', style: TextStyle(fontSize: 6, color: Colors.red)),
-                  Text('Social Center',
-                      style: TextStyle(fontSize: 6, color: Colors.red)),
-                ],
-              ),
-            ),
+                padding: const EdgeInsets.all(2),
+                child: Image.asset('assets/images/SSM_Social_Centre_1.png')),
           ),
           const Expanded(
             child: Text(
@@ -39,7 +31,11 @@ class BottumContainer extends StatelessWidget {
             ),
           ),
           IconButton(
-              onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
+              onPressed: () {},
+              icon: const Icon(
+                Icons.arrow_forward_ios,
+                size: 15,
+              ))
         ],
       ),
     );

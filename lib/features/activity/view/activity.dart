@@ -18,11 +18,11 @@ class ActivityScreen extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(
               Icons.arrow_back,
-              color: kBlack,
+              color: mainColor,
             )),
         elevation: 0,
         backgroundColor: kskyblue,
-        toolbarHeight: 115,
+        toolbarHeight: 80,
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -30,7 +30,7 @@ class ActivityScreen extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.all(8),
           children: [
-            kheight40,
+            kheight20,
             Row(
               children: const [
                 kWidth20,
@@ -65,41 +65,43 @@ class ActivityScreen extends StatelessWidget {
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
                     // Add one stop for each color. Stops should increase from 0 to 1
-                    stops: [0.1, 0.5, 0.7, 0.9],
+                    stops: [0.5, 0.9],
                     colors: [
                       // Colors are easy thanks to Flutter's Colors class.
-                      Colors.indigo,
-                      Colors.indigo,
-                      Colors.indigo,
-                      Colors.indigo,
+                      Color(0xff763DDA),
+
+                      Color(0xff9E6FF1),
+                      // Colors.indigo,
+                      // Colors.indigo,
                     ],
                   ),
                   color: kskyblue,
                   borderRadius: BorderRadius.all(Radius.circular(20))),
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    kheight,
+                    // kheight,
                     const Text('Tell us about your interests!',
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: kWhite)),
                     kheight,
-                    // const Text(
-                    //     style: TextStyle(fontSize: 15, color: kWhite),
-                    //     'Have any interseted activities, but unable to see it \n here? \n Contact your community organizations to help you\n out.'),
+                    const Text(
+                      'Have any interseted activities, but unable to see it \nhere? \nContact your community organizations to help you\n out.',
+                      style: TextStyle(fontSize: 15, color: kWhite),
+                    ),
                     kheight,
                     Row(children: const [
                       Expanded(child: BottumContainer()),
                       kWidth,
                       Expanded(child: BottumContainer()),
                     ]),
-                    kheight20
+                    // kheight20
                   ],
                 ),
               ),

@@ -149,8 +149,8 @@ class SwimmingCategory extends StatelessWidget {
               left: 190,
               child: Image.asset('assets/icons/Rectangle (1).png')),
           Positioned(
-              top: -6,
-              left: 180,
+              top: 25,
+              left: 250,
               child: Image.asset(
                   'assets/images/Soft Brown Minimalist 3D 5 Tips For More Swimming Pool Fun Tips Facebook Post 1.png'))
         ],
@@ -188,7 +188,7 @@ class SlotWidget extends StatelessWidget {
             children: [
               Container(
                 height: 105,
-                width: 120,
+                width: 124,
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20),

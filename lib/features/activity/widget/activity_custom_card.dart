@@ -15,8 +15,13 @@ class ActivityCustomCard extends StatelessWidget {
         RouteController.pushRoute(context, const SwimmingCategory());
       },
       child: Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          )),
           color: items!.color,
           child: Padding(
             padding: const EdgeInsets.only(
@@ -29,21 +34,29 @@ class ActivityCustomCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 kheight,
-                Text(
-                  items!.head,
-                  style: const TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Text(
+                    items!.head,
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
                 kheight,
-                Image.asset(
-                  items!.image,
-                  fit: BoxFit.fill,
+                Align(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    items!.image,
+                    fit: BoxFit.fill,
+                  ),
                 ),
                 kheight20,
                 Container(
                   decoration: const BoxDecoration(
                       color: Color.fromARGB(255, 252, 253, 253),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: Row(
                     children: [
                       Card(
@@ -54,41 +67,36 @@ class ActivityCustomCard extends StatelessWidget {
                         color: const Color.fromARGB(255, 255, 255, 254),
                         child: Padding(
                           padding: const EdgeInsets.all(2),
-                          child: Column(
-                            children: const [
-                              Icon(Icons.abc),
-                              Text('SSM',
-                                  style: TextStyle(
-                                      fontSize: 6, color: Colors.red)),
-                              Text('Social Center',
-                                  style: TextStyle(
-                                      fontSize: 6, color: Colors.red)),
-                            ],
-                          ),
+                          child: Image.asset(
+                              'assets/images/SSM_Social_Centre_1.png'),
                         ),
                       ),
                       const Expanded(
                           child: Text(
-                        'SSM SOCIAL CENTER',
+                        'SSM Social Center',
+                        style: TextStyle(fontSize: 12),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       )),
                       IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.arrow_forward_ios))
+                          icon: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 15,
+                          ))
                     ],
                   ),
                 ),
-                kheight,
                 Visibility(
                   visible: items?.isVisible ?? false,
                   child: Column(
                     children: [
+                      kheight,
                       Container(
                         decoration: const BoxDecoration(
                             color: Color.fromARGB(255, 252, 253, 253),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                                BorderRadius.all(Radius.circular(10))),
                         child: Row(
                           children: [
                             Card(
@@ -99,35 +107,30 @@ class ActivityCustomCard extends StatelessWidget {
                               color: const Color.fromARGB(255, 255, 255, 254),
                               child: Padding(
                                 padding: const EdgeInsets.all(2),
-                                child: Column(
-                                  children: const [
-                                    Icon(Icons.abc),
-                                    Text('SSM',
-                                        style: TextStyle(
-                                            fontSize: 6, color: Colors.red)),
-                                    Text('Social Center',
-                                        style: TextStyle(
-                                            fontSize: 6, color: Colors.red)),
-                                  ],
-                                ),
+                                child: Image.asset(
+                                    'assets/images/SSM_Social_Centre_1.png'),
                               ),
                             ),
                             const Expanded(
                                 child: Text(
-                              'SSM SOCIAL CENTER',
+                              'SSM Social Center',
+                              style: TextStyle(fontSize: 12),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             )),
                             IconButton(
                                 onPressed: () {},
-                                icon: const Icon(Icons.arrow_forward_ios))
+                                icon: const Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 15,
+                                ))
                           ],
                         ),
                       ),
-                      kheight
                     ],
                   ),
                 ),
+                const SizedBox(height: 5)
               ],
             ),
           )),
